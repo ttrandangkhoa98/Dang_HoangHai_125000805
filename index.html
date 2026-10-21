@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio cá nhân của Hoàng Hải Đăng - Sinh viên Thiết kế Web, đam mê Frontend và UI/UX.">
+  <meta name="theme-color" content="#07041a">
+  <title>Hoàng Hải Đăng | Personal Portfolio</title>
+
+  <!-- Favicon (SVG nhúng sẵn, không cần file ngoài) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307041a'/%3E%3Ctext x='32' y='43' font-size='32' text-anchor='middle' fill='%2300f0ff' font-family='Arial' font-weight='700'%3E%C4%90%3C/text%3E%3C/svg%3E">
+
+  <!-- Đánh dấu trình duyệt có JavaScript (dùng cho hiệu ứng tiêu đề) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Animate.css (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- AOS - Animate On Scroll (CDN) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- CSS chính -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Bỏ qua đến nội dung chính</a>
+
+  <!-- ================= HEADER + NAV ================= -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Điều hướng chính">
+      <a href="#hero" class="logo">HHĐ<span class="logo-dot">.</span></a>
+
+      <!-- Nút menu mobile (thuần CSS, không cần JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Mở hoặc đóng menu">
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span class="burger-bar"></span></label>
+
+      <ul class="nav-links">
+        <li><a href="#hero">Trang chủ</a></li>
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#projects">Dự án</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-small">Thuê tôi</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <article class="hero-content">
+        <p class="hero-eyebrow animate__animated animate__fadeInDown">&lt;/&gt; Frontend Developer &amp; UI/UX Designer</p>
+        <h1 id="hero-title" class="hero-title animate__animated animate__fadeInLeft">
+          Xin chào, tôi là <span class="gradient-text">Hoàng Hải Đăng</span>
+        </h1>
+        <p class="hero-desc animate__animated animate__fadeInUp animate__delay-1s">
+          Tôi thiết kế và xây dựng những trải nghiệm web hiện đại, mượt mà và giàu cảm xúc,
+          kết hợp tư duy thẩm mỹ của người thiết kế với sự chặt chẽ của người lập trình.
+        </p>
+        <p class="hero-actions animate__animated animate__fadeInUp animate__delay-2s">
+          <a href="#projects" class="btn btn-primary">Xem dự án</a>
+          <a href="#contact" class="btn btn-outline">Liên hệ ngay</a>
+        </p>
+      </article>
+
+      <!-- aside lơ lửng (float), figure bên trong chạy zoomIn của Animate.css -->
+      <aside class="hero-visual" aria-label="Ảnh đại diện">
+        <figure class="neon-frame avatar-frame animate__animated animate__zoomIn animate__delay-1s">
+          <!-- Thay src bằng ảnh đại diện của bạn, ví dụ: images/avatar.jpg (khuyến nghị 480x480) -->
+          <img src="c:\Users\LHUser\Downloads\IMG_20261020_234054.jpg" alt="Ảnh đại diện của Hoàng Hải Đăng" width="480" height="480">
+          <figcaption class="frame-caption">● Available for work</figcaption>
+        </figure>
+      </aside>
+
+      <a href="#about" class="scroll-hint animate__animated animate__bounce animate__infinite animate__slow" aria-label="Cuộn xuống phần giới thiệu">⌄</a>
+    </section>
+
+    <!-- ================= ABOUT - BENTO GRID ================= -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <header class="section-head">
+        <p class="section-tag" data-aos="fade-down">// 01 - Giới thiệu</p>
+        <h2 id="about-title" class="section-title reveal-title">Về <span class="gradient-text">bản thân</span></h2>
+      </header>
+
+      <!-- Mỗi ô: <li data-aos> (hiệu ứng cuộn) bọc <article> (hiệu ứng hover riêng) để hai hiệu ứng không đè nhau -->
+      <ul class="bento-grid" aria-label="Thông tin cá nhân dạng Bento">
+
+        <li class="bento-item item-intro" data-aos="fade-up">
+          <article class="bento-card" tabindex="0">
+            <h3 class="card-title">Tôi là ai?</h3>
+            <p>
+              Tôi là Hoàng Hải Đăng, sinh viên ngành Công nghệ thông tin với niềm đam mê dành cho
+              thiết kế web và giao diện người dùng. Tôi yêu thích việc biến ý tưởng thành những
+              sản phẩm đẹp, dễ dùng và chạy nhanh trên mọi thiết bị.
+            </p>
+            <p>
+              Phong cách yêu thích của tôi là Dark Modern / Cyberpunk: tương phản mạnh,
+              màu neon và chuyển động tinh tế.
+            </p>
+          </article>
+        </li>
+
+        <li class="bento-item item-photo" data-aos="fade-up" data-aos-delay="100">
+          <article class="bento-card card-photo" tabindex="0">
+            <figure class="neon-frame activity-frame">
+              <!-- Thay src bằng ảnh hoạt động của bạn, ví dụ: images/activity.jpg (khuyến nghị 600x400) -->
+              <img src="c:\Users\LHUser\Downloads\event.jpg" alt="Ảnh hoạt động của Hoàng Hải Đăng tại trường" width="600" height="400" loading="lazy">
+              <figcaption class="frame-caption">Hoạt động &amp; sự kiện</figcaption>
+            </figure>
+          </article>
+        </li>
+
+        <li class="bento-item item-skills" data-aos="fade-up" data-aos-delay="150">
+          <article class="bento-card" tabindex="0">
+            <h3 class="card-title">Kỹ năng</h3>
+            <ul class="tag-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Responsive</li>
+              <li>Figma</li>
+              <li>Git</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="bento-item" data-aos="zoom-in" data-aos-delay="200">
+          <article class="bento-card card-stat" tabindex="0">
+            <p class="stat-number">10+</p>
+            <p class="stat-label">Bài tập &amp; dự án web</p>
+          </article>
+        </li>
+
+        <li class="bento-item" data-aos="zoom-in" data-aos-delay="250">
+          <article class="bento-card card-stat card-stat-pink" tabindex="0">
+            <p class="stat-number">100%</p>
+            <p class="stat-label">Đam mê UI/UX</p>
+          </article>
+        </li>
+
+        <li class="bento-item item-wide" data-aos="fade-up" data-aos-delay="200">
+          <article class="bento-card" tabindex="0">
+            <h3 class="card-title">Học vấn</h3>
+            <p class="edu-name">Đại học - Ngành Công nghệ thông tin</p>
+            <p class="edu-meta">Môn học: Thiết kế Web · Giữa kỳ 2026</p>
+          </article>
+        </li>
+
+        <li class="bento-item item-wide" data-aos="fade-up" data-aos-delay="100">
+          <article class="bento-card" tabindex="0">
+            <h3 class="card-title">Sở thích</h3>
+            <ul class="tag-list tag-list-pink">
+              <li>Game</li>
+              <li>Âm nhạc</li>
+              <li>Thiết kế</li>
+              <li>Công nghệ</li>
+            </ul>
+          </article>
+        </li>
+
+        <li class="bento-item item-wide" data-aos="fade-up" data-aos-delay="200">
+          <article class="bento-card card-quote" tabindex="0">
+            <h3 class="card-title">Phương châm</h3>
+            <blockquote class="quote-text">
+              <p>“Thiết kế đẹp là thiết kế khiến người dùng cảm thấy dễ chịu.”</p>
+            </blockquote>
+          </article>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <header class="section-head">
+        <p class="section-tag" data-aos="fade-down">// 02 - Dự án</p>
+        <h2 id="projects-title" class="section-title reveal-title">Dự án <span class="gradient-text">nổi bật</span></h2>
+      </header>
+
+      <ul class="project-grid" aria-label="Danh sách dự án">
+
+        <li class="project-item" data-aos="fade-up">
+          <article class="project-card">
+            <figure class="neon-frame project-frame">
+              <!-- Thay src bằng ảnh xem trước dự án (khuyến nghị 640x400) -->
+              <img src="c:\Users\LHUser\Downloads\project1.jpg"
+              " alt="Ảnh xem trước dự án Website bán hàng" width="640" height="400" loading="lazy">
+              <figcaption class="frame-caption">Dự án 01</figcaption>
+            </figure>
+            <h3 class="card-title">Website bán hàng</h3>
+            <p>Giao diện cửa hàng trực tuyến responsive với giỏ hàng và bộ lọc sản phẩm.</p>
+            <ul class="tag-list tag-list-small">
+              <li>HTML</li><li>CSS</li><li>JS</li>
+            </ul>
+            <p class="card-actions">
+              <a href="#" class="btn btn-outline btn-small">Xem demo</a>
+              <a href="#" class="btn btn-ghost btn-small">Mã nguồn</a>
+            </p>
+          </article>
+        </li>
+
+        <li class="project-item" data-aos="fade-up" data-aos-delay="100">
+          <article class="project-card">
+            <figure class="neon-frame project-frame">
+              <img src="c:\Users\LHUser\Downloads\project2.jpg " alt="Ảnh xem trước dự án Landing page sự kiện" width="640" height="400" loading="lazy">
+              <figcaption class="frame-caption">Dự án 02</figcaption>
+            </figure>
+            <h3 class="card-title">Landing Page sự kiện</h3>
+            <p>Trang giới thiệu sự kiện với hiệu ứng cuộn, đếm ngược và form đăng ký.</p>
+            <ul class="tag-list tag-list-small">
+              <li>Animate.css</li><li>AOS</li><li>Flexbox</li>
+            </ul>
+            <p class="card-actions">
+              <a href="#" class="btn btn-outline btn-small">Xem demo</a>
+              <a href="#" class="btn btn-ghost btn-small">Mã nguồn</a>
+            </p>
+          </article>
+        </li>
+
+        <li class="project-item" data-aos="fade-up" data-aos-delay="200">
+          <article class="project-card">
+            <figure class="neon-frame project-frame">
+              <img src="c:\Users\LHUser\Downloads\project3 (1).jpg" alt="Ảnh xem trước dự án Dashboard quản lý" width="640" height="400" loading="lazy">
+              <figcaption class="frame-caption">Dự án 03</figcaption>
+            </figure>
+            <h3 class="card-title">Dashboard quản lý</h3>
+            <p>Bảng điều khiển dữ liệu với bố cục CSS Grid và giao diện Dark Mode.</p>
+            <ul class="tag-list tag-list-small">
+              <li>CSS Grid</li><li>Dark UI</li><li>Charts</li>
+            </ul>
+            <p class="card-actions">
+              <a href="#" class="btn btn-outline btn-small">Xem demo</a>
+              <a href="#" class="btn btn-ghost btn-small">Mã nguồn</a>
+            </p>
+          </article>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <header class="section-head">
+        <p class="section-tag" data-aos="fade-down">// 03 - Liên hệ</p>
+        <h2 id="contact-title" class="section-title reveal-title">Kết nối <span class="gradient-text">cùng tôi</span></h2>
+      </header>
+
+      <article class="contact-card" data-aos="zoom-in">
+        <address class="contact-info">
+          <h3 class="card-title">Thông tin liên hệ</h3>
+          <ul class="info-list">
+            <li>
+              <span class="info-label">Email</span>
+              <!-- Thay bằng email thật của bạn -->
+              <a href="mailto:ttrandangkhoa98@gmail.com">ttrandangkhoa98@gmail.com</a>
+            </li>
+            <li>
+              <span class="info-label">Điện thoại</span>
+              <!-- Thay bằng số điện thoại thật của bạn -->
+              <a href="tel:+84898547273">0898547273</a>
+            </li>
+            <li>
+              <span class="info-label">Địa điểm</span>
+              <span>Việt Nam</span>
+            </li>
+          </ul>
+        </address>
+
+        <form class="contact-form" action="#" method="post">
+          <label class="field">
+            <span class="field-label">Họ và tên</span>
+            <input type="text" name="name" placeholder="Nguyễn Văn A" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input type="email" name="email" placeholder="ban@example.com" autocomplete="email" required>
+          </label>
+          <label class="field field-full">
+            <span class="field-label">Lời nhắn</span>
+            <textarea name="message" rows="5" placeholder="Bạn muốn trao đổi điều gì?" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+          <output class="form-status" aria-live="polite"></output>
+        </form>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <p>© 2026 <strong>Hoàng Hải Đăng</strong> · Bài kiểm tra giữa kỳ môn Thiết kế Web</p>
+    <nav aria-label="Mạng xã hội">
+      <ul class="social-links">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <!-- AOS (CDN) + khởi tạo -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Nếu AOS không tải được (mất mạng) thì gỡ data-aos để nội dung không bị ẩn
+    if (window.AOS) {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80
+      });
+      window.addEventListener('load', function () { AOS.refresh(); });
+    } else {
+      document.querySelectorAll('[data-aos]').forEach(function (el) { el.removeAttribute('data-aos'); });
+    }
+
+    // Tiêu đề section: chạy hiệu ứng Animate.css khi cuộn tới
+    (function () {
+      var titles = document.querySelectorAll('.reveal-title');
+      var play = function (el) { el.classList.add('animate__animated', 'animate__fadeInUp'); };
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) { play(entry.target); io.unobserve(entry.target); }
+          });
+        }, { threshold: 0.4 });
+        titles.forEach(function (t) { io.observe(t); });
+      } else {
+        titles.forEach(play);
+      }
+    })();
+
+    // Đóng menu mobile sau khi bấm một liên kết
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
+
+    // Form liên hệ (bản demo, chưa gửi đi đâu)
+    (function () {
+      var form = document.querySelector('.contact-form');
+      var status = document.querySelector('.form-status');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = form.elements['name'].value.trim();
+        status.textContent = 'Cảm ơn ' + name + '! Đây là form demo nên tin nhắn chưa được gửi đi thật.';
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
